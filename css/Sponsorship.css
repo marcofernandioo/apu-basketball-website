@@ -1,0 +1,29 @@
+﻿body {
+	background-color: #000000;
+}
+#section0 {
+	vertical-align: middle;
+	text-align: justify;
+}
+
+#title {
+	font-size: 70px;
+	font-weight: bold;
+	color: red;
+	vertical-align: middle;
+	padding-right: 5%;
+	padding-left: 5%;
+}
+#subtitle{
+	font-size: 35px;
+	color: white;
+	padding-right: 5%;
+	font-weight: normal;
+	padding-left: 5%;
+}
+
+a {
+	font-size: 35px;
+	color: white;
+	text-decoration: underline;
+}

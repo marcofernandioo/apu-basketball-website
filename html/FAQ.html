@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<head>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/FAQ.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <title>FAQ</title>
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+  <!-- Navbar -->
+  <div class="w-full text-white bg-black dark-mode:text-gray-200 dark-mode:bg-gray-800 sticky top-0 z-50">
+    <div x-data="{ open: false }"
+      class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+      <div class="p-4 flex flex-row items-center justify-between">
+        <a href="../index.html"
+          class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+          APU Basketball</a>
+        <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path x-show="!open" fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+            <path x-show="open" fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <nav :class="{'flex': open, 'hidden': !open}"
+        class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+        <a class="px-4 py-2 mt-2 text-sm font-semibold text-white bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-gray-600 focus:outline-none focus:shadow-outline"
+          href="./AboutUs.html">About</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+          href="./JoinUs.html">Join Us</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+          href="./ContactUs.html">Contacts</a>
+        <div @click.away="open = false" class="relative" x-data="{ open: false }">
+          <button @click="open = !open"
+            class="flex flex-row background-red-600 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline">
+            <span>Others</span>
+            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+              class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div x-show="open" x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            class="z-50 absolute right-2 w-full mt-2 origin-center rounded-md shadow-lg md:w-96">
+            <div class="px-2 py-2 bg-white rounded-md shadow">
+              <table>
+                <tr>
+                  <th><a class="text-red-600 mb-3">Pages</a></th>
+                  <th><a class="text-red-600 mb-3 mr-3">Actions</a></th>
+                  <th><a class="text-red-600 mb-3">Info</a></th>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="../index.html">
+                      Home
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./JoinUs.html">
+                      Join Us
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./Sponsorship.html">
+                      Sponsors
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./AboutUs.html">
+                      About Us
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./ContactUs.html">
+                      Contact
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./Gallery.html">
+                      Gallery
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./News.html">
+                      News
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./CourtBooking.html">
+                      Book a Court
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./Covid.html">
+                      COVID-19
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./OurTeam.html">
+                      Our Team
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-white" href="#">
+                      _
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./Achievements.html">
+                      Achievements
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="text-white block px-4 py-2 mt-2 text-sm font-semibold bg-red-600 rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                      href="./FAQ.html">
+                      FAQ
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-white" href="#">
+                      _
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-white" href="#">
+                      _
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!--1--->
+  <div class="accordion-content">
+    <h2>FAQ</h2>
+
+    <div class="accordion-item">
+      <header class="item-header">
+        <h4 class="item-question">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+        </h4>
+        <div class="item-icon">
+          <i class='bx bx-chevron-down'></i>
+        </div>
+      </header>
+      <div class="item-content">
+        <p class="item-answer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing
+          elitl
+        </p>
+        <p class="item-answer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <header class="item-header">
+        <h4 class="item-question">
+          Lorem ipsum dolor sit amet?
+        </h4>
+        <div class="item-icon">
+          <i class='bx bx-chevron-down'></i>
+        </div>
+      </header>
+      <div class="item-content">
+        <p class="item-answer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        <p class="item-answer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <header class="item-header">
+        <h4 class="item-question">
+          Lorem ipsum dolor sit amet, consectetur?</h4>
+        <div class="item-icon">
+          <i class='bx bx-chevron-down'></i>
+        </div>
+      </header>
+      <div class="item-content">
+        <p class="item-answer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <header class="item-header">
+        <h4 class="item-question">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+        </h4>
+        <div class="item-icon">
+          <i class='bx bx-chevron-down'></i>
+        </div>
+      </header>
+      <div class="item-content">
+        <p class="item-answer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit.
+        </p>
+        <p class="item-answer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    console.log("Test")
+    const accordionBtns = document.getElementsByClassName("item-header");
+    console.log(accordionBtns)
+
+    accordionBtns.forEach((accordion) => {
+      console.log(accordion)
+      accordion.onclick = function () {
+        console.log("clicked")
+        this.classList.toggle("active");
+
+        let content = this.nextElementSibling;
+        console.log(content);
+
+        if (content.style.maxHeight) {
+          //this is if the accordion is open
+          content.style.maxHeight = null;
+        } else {
+          //if the accordion is currently closed
+          content.style.maxHeight = content.scrollHeight + "px";
+          console.log(content.style.maxHeight);
+        }
+      };
+    });
+  </script>
+</body>
+
+</html>

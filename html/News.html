@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>News</title>
+	<link href="News.css" rel="stylesheet" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet' />
+	<style type="text/css">
+		#nav {
+			padding-top: 4px;
+			padding-bottom: 4px;
+			padding-left: 4px;
+			font-size: 20px;
+			float: right;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			border-bottom-color: #FFFFFF;
+		}
+
+		a {
+			color: #ffffff;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		/* selector state */
+		a:hover {
+			/* Swapping Color when mouse select(mouse hover) the nav bar */
+			color: red;
+		}
+
+		.container {
+			position: fixed;
+			width: 30%;
+		}
+
+		.image {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: .5s ease;
+			background-color: #008CBA;
+		}
+
+		.container:hover .overlay {
+			opacity: 1;
+		}
+
+		.text {
+			color: white;
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+
+		.auto-style1 {
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		.auto-style2 {
+			font-size: 20px;
+			font-weight: bold;
+			text-decoration: blink;
+		}
+
+		.auto-style3 {
+			color: #008000;
+		}
+
+		.auto-style4 {
+			color: white;
+		}
+
+		body {
+			font-family: 'League Spartan';
+		}
+
+		.auto-style5 {
+			font-size: 20px;
+		}
+
+		.auto-style7 {
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		.auto-style9 {
+			font-weight: normal;
+		}
+
+		.auto-style11 {
+			color: #FF0000;
+		}
+
+		.auto-style13 {
+			font-size: 70px;
+			color: #FF0000;
+		}
+
+		.auto-style14 {
+			font-weight: bold;
+		}
+
+		.auto-style15 {
+			color: #FFFFFF;
+			font-size: 80px;
+		}
+
+		.auto-style16 {
+			font-size: 70px;
+			font-weight: bold;
+			color: #FF0000;
+		}
+
+		.auto-style17 {
+			font-size: 70px;
+			font-weight: bold;
+		}
+
+		.auto-style18 {
+			color: white;
+			font-size: 40px;
+		}
+
+		.auto-style19 {
+			font-size: 70px;
+		}
+
+		.auto-style20 {
+			font-weight: normal;
+			font-size: 40px;
+		}
+	</style>
+</head>
+
+<body bgcolor="black">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+	<!-- Navbar -->
+	<div class="w-full text-white bg-black dark-mode:text-gray-200 dark-mode:bg-gray-800 sticky top-0 z-50">
+		<div x-data="{ open: false }"
+			class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+			<div class="p-4 flex flex-row items-center justify-between">
+				<a href="../index.html"
+					class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+					APU Basketball</a>
+				<button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+						<path x-show="!open" fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+							clip-rule="evenodd"></path>
+						<path x-show="open" fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+			<nav :class="{'flex': open, 'hidden': !open}"
+				class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+				<a class="px-4 py-2 mt-2 text-sm font-semibold text-white bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-gray-600 focus:outline-none focus:shadow-outline"
+					href="./AboutUs.html">About</a>
+				<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+					href="./JoinUs.html">Join Us</a>
+				<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+					href="./ContactUs.html">Contacts</a>
+				<div @click.away="open = false" class="relative" x-data="{ open: false }">
+					<button @click="open = !open"
+						class="flex flex-row background-red-600 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline">
+						<span>Others</span>
+						<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+							class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+							<path fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<div x-show="open" x-transition:enter="transition ease-out duration-100"
+						x-transition:enter-start="transform opacity-0 scale-95"
+						x-transition:enter-end="transform opacity-100 scale-100"
+						x-transition:leave="transition ease-in duration-75"
+						x-transition:leave-start="transform opacity-100 scale-100"
+						x-transition:leave-end="transform opacity-0 scale-95"
+						class="z-50 absolute right-2 w-full mt-2 origin-center rounded-md shadow-lg md:w-96">
+						<div class="px-2 py-2 bg-white rounded-md shadow">
+							<table>
+								<tr>
+									<th><a class="text-red-600 mb-3">Pages</a></th>
+									<th><a class="text-red-600 mb-3 mr-3">Actions</a></th>
+									<th><a class="text-red-600 mb-3">Info</a></th>
+								</tr>
+								<tr>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="../index.html">
+											Home
+										</a>
+									</td>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./JoinUs.html">
+											Join Us
+										</a>
+									</td>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./Sponsorship.html">
+											Sponsors
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./AboutUs.html">
+											About Us
+										</a>
+									</td>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./ContactUs.html">
+											Contact
+										</a>
+									</td>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./Gallery.html">
+											Gallery
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a class="text-white block px-4 py-2 mt-2 text-sm font-semibold bg-red-600 rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./News.html">
+											News
+										</a>
+									</td>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./CourtBooking.html">
+											Book a Court
+										</a>
+									</td>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./Covid.html">
+											COVID-19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./OurTeam.html">
+											Our Team
+										</a>
+									</td>
+									<td>
+										<a class="text-white" href="#">
+											_
+										</a>
+									</td>
+									<td>
+										<a class="text-white block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./Achievements.html">
+											Achievements
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+											href="./FAQ.html">
+											FAQ
+										</a>
+									</td>
+									<td>
+										<a class="text-white" href="#">
+											_
+										</a>
+									</td>
+									<td>
+										<a class="text-white" href="#">
+											_
+										</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div id="News">
+		<br />
+		<br />
+
+		<div id="Section0" align="center" style="color: #000000">
+			<br />
+			<br />
+			<table
+				style="width: 100%; border-bottom-width: 2px; border-bottom-color: #000000; border-bottom-style: solid; border-top-style: solid; border-top-width: 2px; border-top-color: #000000;">
+				<tr>
+					<td align="center" height="100px" style="font-weight: bold; " width="100%" class="auto-style15">
+						News</td>
+				</tr>
+			</table>
+			<br />
+			<table class="auto-style1" style="width: 100%; ">
+				<tr>
+					<td width="50%"
+						style="color: #000000; font-size: 12px; text-align: left; padding-right: 5%; padding-left: 5%; font-weight: normal; vertical-align: middle;">
+						<span class="auto-style17"><span class="auto-style4">Get</span>
+							<span class="auto-style11">Updated</span>
+							<span class="auto-style4">With Our Latest</span> </span>
+						<span class="auto-style16">News</span><span class="auto-style3"><span class="auto-style5"><br />
+								<br />
+							</span>
+						</span><br />
+						<meta charset="utf-8" />
+						<span style="white-space:pre-wrap;" class="auto-style18">Take a look at our accomplishments
+							since the beginning of our club.</span>
+					</td>
+					<td width="50%" style="padding-bottom: 1%">
+						<img src="../assets/img-3.png" width="100%" height="20%" />
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div id="Section1">
+
+			<table cellpadding="0" cellspacing="0" class="auto-style1"
+				style="width: 100%; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000;">
+				<tr>
+					<td width="50%" style="padding-bottom: 1%">
+						<img height="20%" src="../assets/img-4.png" width="100%" />
+					</td>
+					<td width="50%"
+						style="font-size: 12px; font-weight: normal; padding-right: 5%; padding-left: 5%; color: #000000; vertical-align: middle; "
+						align="left">
+						<span class="auto-style17"><span class="auto-style4">We are</span> <span
+								class="auto-style11">Back!</span></span><span class="auto-style7"><span
+								class="auto-style3"><br />
+								<br />
+							</span></span>
+						<span class="auto-style18">Take a look at our accomplishments
+							since the beginning of our club.</span>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div id="Section2">
+
+			<table cellpadding="0" cellspacing="0" class="auto-style1" style="width: 100%; ">
+				<tr>
+					<td width="50%"
+						style="margin: 0px; border-radius: 0px; color: #000000; padding-left: 5%; padding-right: 5%;">
+						<span class="auto-style4"><span class="auto-style19">News </span></span><span
+							class="auto-style19"> </span>
+						<span class="auto-style13">Heading 1</span><span class="auto-style3"><span
+								class="auto-style9"><br />
+								<br />
+							</span></span><span class="auto-style20">
+							<span class="auto-style4" style="text-align: left">Take a look
+								at our accomplishments since the beginning of our club.</span></span>
+					</td>
+					<td width="50%">
+						<img src="../assets/img-5.png" width="100%" height="20%" style="padding-bottom: 1%;" />
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div id="Section3">
+
+			<table cellpadding="0" cellspacing="0" class="auto-style2" style="width: 100%; ">
+				<tr>
+					<td width="50%" rowspan="2">
+						<img src="../assets/img-6.png" width="100%" height="20%" style="padding-bottom: 1%;" />
+					</td>
+					<td width="50%"
+						style="padding: 0% 5% 0% 5%; color: #000000; font-size: 12px; font-weight: normal; vertical-align: middle;">
+						<b><span class="auto-style4"><span class="auto-style19">News</span></span><span
+								class="auto-style19"> </span></b>
+						<span class="auto-style14"><span class="auto-style16">Heading 2</span></span><span
+							class="auto-style3"><span class="auto-style9"><br />
+								<br />
+							</span></span><span class="auto-style20">
+							<span class="auto-style4" style="text-align: left">Take a look
+								at our accomplishments since the beginning of our club.</span></span>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+	</div>
+</body>
+
+</html>

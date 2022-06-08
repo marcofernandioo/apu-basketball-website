@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
+
+.footer-2-4 .list-footer li a {
+    color: #999999;
+}
+
+.footer-2-4 .list-footer li a:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footer-2-4 .border-color {
+    color: #999999;
+}
+
+.footer-2-4 .footer-link:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footer-2-4 .social-media-c:hover circle,
+.footer-2-4 .social-media-p:hover path {
+    fill: #FFFFFF;
+    cursor: pointer;
+}

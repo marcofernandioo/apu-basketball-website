@@ -1,27 +1,24 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/Footer.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
-    <title>Homepage</title>
 </head>
 
 <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+    <!-- Navbar -->
     <div class="w-full text-white bg-black dark-mode:text-gray-200 dark-mode:bg-gray-800 sticky top-0 z-50">
         <div x-data="{ open: false }"
             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="p-4 flex flex-row items-center justify-between">
-                <a href="index.html"
-                    class="text-lg font-semibold tracking-widest text-red-600 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+                <a href="../index.html"
+                    class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
                     APU Basketball</a>
                 <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                     <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -37,11 +34,11 @@
             <nav :class="{'flex': open, 'hidden': !open}"
                 class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
                 <a class="px-4 py-2 mt-2 text-sm font-semibold text-white bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-gray-600 focus:outline-none focus:shadow-outline"
-                    href="./html/AboutUs.html">About</a>
+                    href="./AboutUs.html">About</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-red-600 rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                    href="./JoinUs.html">Join Us</a>
                 <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                    href="./html/JoinUs.html">Join Us</a>
-                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                    href="./html/ContactUs.html">Contacts</a>
+                    href="./ContactUs.html">Contacts</a>
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                     <button @click="open = !open"
                         class="flex flex-row background-red-600 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline">
@@ -69,20 +66,20 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a class="text-white block px-4 py-2 mt-2 text-sm font-semibold bg-red-600 rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./index.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                                            href="../index.html">
                                             Home
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/JoinUs.html">
+                                        <a class="text-white block px-4 py-2 mt-2 text-sm font-semibold bg-red-600 rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
+                                            href="./JoinUs.html">
                                             Join Us
                                         </a>
                                     </td>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/Sponsorship.html">
+                                            href="./Sponsorship.html">
                                             Sponsors
                                         </a>
                                     </td>
@@ -90,19 +87,19 @@
                                 <tr>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/AboutUs.html">
+                                            href="./AboutUs.html">
                                             About Us
                                         </a>
                                     </td>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/ContactUs.html">
+                                            href="./ContactUs.html">
                                             Contact
                                         </a>
                                     </td>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/Gallery.html">
+                                            href="./Gallery.html">
                                             Gallery
                                         </a>
                                     </td>
@@ -110,19 +107,19 @@
                                 <tr>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/News.html">
+                                            href="./News.html">
                                             News
                                         </a>
                                     </td>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/CourtBooking.html">
+                                            href="./CourtBooking.html">
                                             Book a Court
                                         </a>
                                     </td>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/Covid.html">
+                                            href="./Covid.html">
                                             COVID-19
                                         </a>
                                     </td>
@@ -130,7 +127,7 @@
                                 <tr>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/OurTeam.html">
+                                            href="./OurTeam.html">
                                             Our Team
                                         </a>
                                     </td>
@@ -141,7 +138,7 @@
                                     </td>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/Achievements.html">
+                                            href="./Achievements.html">
                                             Achievements
                                         </a>
                                     </td>
@@ -149,7 +146,7 @@
                                 <tr>
                                     <td>
                                         <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./html/FAQ.html">
+                                            href="./FAQ.html">
                                             FAQ
                                         </a>
                                     </td>
@@ -171,134 +168,162 @@
             </nav>
         </div>
     </div>
-    <section>
-        <div class="quote">
-            <div class="textBox">
-                <h1>Once a Baller,<br><span>Always a Baller</span></h1>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod voluptatem rem, corporis magni
-                    adipisci sapiente cum amet autem officiis voluptatibus nihil vitae consequatur minus nesciunt
-                    tempore laudantium alias aliquam ducimus!
-                </p>
-                <a href="#">Join Us</a>
-            </div>
-            <div class="image">
-                <img src="assets/img-1.png" alt="" class="sports">
-            </div>
-        </div>
-    </section>
 
-    <div class="banner">
-        <img src="./assets/img-2.png">
-        <div>
-            <h2>Who We Are, and What <br />We Believe In</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nemo laboriosam veniam, facere odit
-                commodi et praesentium, repellat vitae numquam natus at, eaque libero reprehenderit necessitatibus
-                eligendi autem tenetur id.</p>
-        </div>
-    </div>
-
-    <div class="bann ">
-        <img src="assets/img-3.png">
-        <div>
-            <h2>All time favourite place</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nemo laboriosam veniam, facere odit
-                commodi et praesentium, repellat vitae numquam natus at, eaque libero reprehenderit necessitatibus
-                eligendi autem tenetur id.</p>
-        </div>
-    </div>
-
-    <div class="content">
-        <h1>Title</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, alias est quod fugiat quis omnis. Doloremque
-            voluptatibus minima, repudiandae amet quasi a suscipit sed ratione voluptatem, maiores velit, repellat
-            provident.</p>
-        <div class="upper">
-            <div>
-                <img src="assets/img-2.png">
-                <!-- <h2>Lorem ipsum dolor sit</h2> -->
-                <!-- <p>Gleaming skyscrappers, colonial architecture, expansive shopping malls and abundance of gastronomic delight.</p>
-                <h4>$345.00 </h4> -->
+    <!-- Section 1 -->
+    <section class="h-full w-full border-box transition-all duration-500 linear" style="background-color: #000000">
+        <style scoped>
+          @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    
+          .content-4-2 .input {
+            border: 1px solid #292738;
+            background-color: #252332;
+            color: #ffffff;
+            transition: 0.3s;
+          }
+    
+          .content-4-2 .input:focus-within {
+            border: 1px solid #dc2626;
+            color: #ffffff;
+            transition: 0.3s;
+          }
+    
+          .content-4-2 .input input::placeholder {
+            color: #4e4b62;
+            transition: 0.3s;
+          }
+    
+          .content-4-2 .input:focus-within input::placeholder {
+            color: #ffffff;
+            outline: none;
+            transition: 0.3s;
+          }
+    
+          .content-4-2 .input:focus-within .icon path {
+            transition: 0.3;
+            fill: #dc2626;
+            transition: 0.3s;
+          }
+    
+          .content-4-2 .input .icon-toggle path {
+            transition: 0.3;
+            fill: #dc2626;
+            transition: 0.3s;
+          }
+    
+          .content-4-2 .centered {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+    
+          .content-4-2 .width-left {
+            width: 0%;
+          }
+    
+          .content-4-2 .width-right {
+            width: 100%;
+          }
+    
+          .content-4-2 .forgot-password {
+            color: #737182;
+            transition: 0.3s;
+          }
+    
+          .content-4-2 .forgot-password:hover {
+            color: #ffffff;
+          }
+    
+          .content-4-2 .btn-fill {
+            background-image: linear-gradient(rgba(220, 38, 38, 1),
+                rgba(220, 38, 38, 1));
+          }
+    
+          .content-4-2 .btn-fill:hover {
+            background-image: linear-gradient(#dc2626, #dc2626);
+          }
+    
+          .content-4-2 .bg-medium-black-1 {
+            background-color: #211f2d;
+          }
+    
+          .content-4-2 .bg-medium-black-2 {
+            background-color: #252332;
+          }
+    
+          .content-4-2 .text-gray {
+            color: #ffffff;
+          }
+    
+          .content-4-2 .text-green {
+            color: #dc2626;
+          }
+    
+          .content-4-2 .text-medium-white {
+            color: #d8d7df;
+          }
+    
+          @media (min-width: 1024px) {
+            .content-4-2 .width-left {
+              width: 48%;
+            }
+    
+            .content-4-2 .width-right {
+              width: 52%;
+            }
+          }
+        </style>
+        <div class="content-4-2" style="font-family: 'Poppins', sans-serif">
+          <div class="flex flex-col items-center h-full lg:flex-row">
+            <div class="relative hidden lg:block h-full width-left">
+              <img class="absolute object-fill centered"
+                src="../assets/img-11.png"
+                alt=""
+                height="50vh"
+              />
             </div>
-            <div>
-                <img src="assets/img-5.png ">
-                <!-- <h2>Lorem ipsum dolor sit</h2> -->
-                <!-- <p>Glimmering Andaman Sea, crystalline waters, lush tropical rainforests, staggering cliffs and heavenly beaches.</p>
-                <h4>$345.00 </h4> -->
-            </div>
-            <div>
-                <img src="assets/img-2.png">
-                <!-- <h2>Lorem ipsum dolor sit</h2> -->
-                <!-- <p>Crystal-clear, pristine beaches, colorful coral reefs, coastal cuisine and adrenaline pumping water-based activities.</p>
-                <h4>$345.00 </h4> -->
-            </div>
-
-            <div>
-                <img src="assets/img-1.png  ">
-                <!-- <h2>Lorem ipsum dolor sit</h2> -->
-                <!-- <p>Heritage buildings, ancient landmarks and rich cultural heritage subsequent to Portugese, Dutch and Britsh.</p>
-                <h4>$345.00 </h4> -->
-            </div>
-        </div>
-
-        <div class="subscription">
-            <h2 class="sub_title">Let's keep in touch</h2>
-            <p class="sub_copy">Subscribe to keep up with fresh news and exciting updates!</p>
-            <div class="form">
-                <input type="email" class="form_email" placeholder="Enter your email address" />
-                <button class="form_button">Send</button>
-            </div>
-            <div class="notice">
-                <input type="checkbox">
-                <span class="notice2">I agree to my email address being stored and uses to recieve monthly
-                    newsletter.</span>
-            </div>
-        </div>
-
-        <footer>
-            <!-- <h1>Website Name</h1> -->
-            <div class="footer-container">
-                <div class="row">
-                    <div class="footer-col">
-                        <h4>company</h4>
-                        <ul>
-
-                        </ul>
-                    </div>
-                    <div class="footer-col ">
-                        <h4>get help</h4>
-                        <ul>
-                            <li><a href="# ">FAQ</a></li>
-                            <li><a href="# ">shipping</a></li>
-                            <li><a href="# ">returns</a></li>
-                            <li><a href="# ">order status</a></li>
-                            <li><a href="# ">payment options</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col ">
-                        <h4>online shop</h4>
-                        <ul>
-                            <li><a href="# ">watch</a></li>
-                            <li><a href="# ">bag</a></li>
-                            <li><a href="# ">shoes</a></li>
-                            <li><a href="# ">dress</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col ">
-                        <h4>follow us</h4>
-                        <div class="social-links ">
-                            <a href="# "><i class="fab fa-facebook-f "></i></a>
-                            <a href="# "><i class="fab fa-twitter "></i></a>
-                            <a href="# "><i class="fab fa-instagram "></i></a>
-                            <a href="# "><i class="fab fa-linkedin-in "></i></a>
-                        </div>
-                    </div>
+            <div
+              class="flex w-full h-full px-8 width-right sm:px-16 py-32 lg:mx-0 mx-auto items-left justify-left bg-black">
+              <div class="w-full sm:w-7/12 md:w-8/12 lg:w-9/12 xl:w-7/12 mx-auto lg:mx-0">
+                <div class="items-center justify-center lg:hidden flex">
+                  <img src="../assets/img-11.png"
+                    alt="" />
                 </div>
+                <h3 class="text-3xl font-semibold mb-3 text-white">
+                  Join Us
+                </h3>
+                <form class="mt-6" x-data="{ show: false }">
+                  <div class="mb-7">
+                    <label class="block text-lg font-medium text-white">Fullname</label>
+                    <div class="flex items-center w-full px-5 py-4 mt-3 text-base font-light rounded-xl input">
+                      <input type="text" placeholder="Your Fullname"
+                        class="w-full focus:outline-none text-base font-light bg-medium-black-2" required />
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <label class="block text-lg font-medium text-white">Email Address</label>
+                    <div class="flex w-full px-5 py-4 mt-3 text-base font-light rounded-xl input">
+                      <svg class="mr-4 icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M5 5C3.34315 5 2 6.34315 2 8V16C2 17.6569 3.34315 19 5 19H19C20.6569 19 22 17.6569 22 16V8C22 6.34315 20.6569 5 19 5H5ZM5.49607 7.13174C5.01655 6.85773 4.40569 7.02433 4.13168 7.50385C3.85767 7.98337 4.02427 8.59422 4.50379 8.86823L11.5038 12.8682C11.8112 13.0439 12.1886 13.0439 12.4961 12.8682L19.4961 8.86823C19.9756 8.59422 20.1422 7.98337 19.8682 7.50385C19.5942 7.02433 18.9833 6.85773 18.5038 7.13174L11.9999 10.8482L5.49607 7.13174Z"
+                          fill="#4E4B62" />
+                      </svg>
+                      <input type="email" placeholder="Your Email Address"
+                        class="w-full focus:outline-none text-base font-light bg-medium-black-2" required />
+                    </div>
+                  </div>
+                  <button type="submit"
+                    class="btn-fill block w-full px-4 py-3 mt-9 font-medium text-xl text-white transition duration-500 ease-in-out transform rounded-xl hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                    Join Us
+                  </button>
+                </form>
+              </div>
             </div>
-        </footer>
+          </div>
+        </div>
+    
+      </section>
+
 </body>
-
-
-
 
 </html>
