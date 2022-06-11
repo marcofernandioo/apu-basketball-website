@@ -1,13 +1,9 @@
-﻿body {
-	
+﻿* {
+	 font-family: "League Spartan"
 }
 
-#Achievement{
-	
-}
-
-#Section0{
- 
+body {
+	background-color: #000000;
 }
 
 #Section1{

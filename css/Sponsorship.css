@@ -1,29 +1,102 @@
-﻿body {
-	background-color: #000000;
-}
-#section0 {
-	vertical-align: middle;
-	text-align: justify;
+﻿* {
+    font-family: 'League Spartan';
 }
 
-#title {
-	font-size: 70px;
-	font-weight: bold;
-	color: red;
-	vertical-align: middle;
-	padding-right: 5%;
-	padding-left: 5%;
-}
-#subtitle{
-	font-size: 35px;
-	color: white;
-	padding-right: 5%;
-	font-weight: normal;
-	padding-left: 5%;
+body {
+    background-color: #000000;
 }
 
-a {
-	font-size: 35px;
-	color: white;
-	text-decoration: underline;
+.content-4-2 .input {
+    border: 1px solid #1c1c1c;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.content-4-2 .input:focus-within {
+    border: 1px solid #dc2626;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.content-4-2 .input input::placeholder {
+    color: #4e4b62;
+    transition: 0.3s;
+}
+
+.content-4-2 .input:focus-within input::placeholder {
+    color: #ffffff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.content-4-2 .input:focus-within .icon path {
+    transition: 0.3;
+    fill: #dc2626;
+    transition: 0.3s;
+}
+
+.content-4-2 .input .icon-toggle path {
+    transition: 0.3;
+    fill: #dc2626;
+    transition: 0.3s;
+}
+
+.content-4-2 .centered {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-4-2 .width-left {
+    width: 0%;
+}
+
+.content-4-2 .width-right {
+    width: 100%;
+}
+
+.content-4-2 .forgot-password {
+    color: #737182;
+    transition: 0.3s;
+}
+
+.content-4-2 .forgot-password:hover {
+    color: #ffffff;
+}
+
+.content-4-2 .btn-fill {
+    background-image: linear-gradient(rgba(220, 38, 38, 1),
+            rgba(220, 38, 38, 1));
+}
+
+.content-4-2 .btn-fill:hover {
+    background-image: linear-gradient(#dc2626, #dc2626);
+}
+
+
+.content-4-2 .bg-medium-black {
+    background-color: #1c1c1c;
+}
+
+.content-4-2 .text-gray {
+    color: #ffffff;
+}
+
+.content-4-2 .text-green {
+    color: #dc2626;
+}
+
+.content-4-2 .text-medium-white {
+    color: #d8d7df;
+}
+
+@media (min-width: 1024px) {
+    .content-4-2 .width-left {
+        width: 48%;
+    }
+
+    .content-4-2 .width-right {
+        width: 52%;
+    }
 }

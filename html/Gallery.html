@@ -2,18 +2,11 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap"
-        rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet' />
-    <link rel="stylesheet" href="../css/style1.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-        
-<style>
-body {
-	font-family: 'League Spartan';
-}
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>About Us</title>
 </head>
 
@@ -22,11 +15,9 @@ body {
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
     <!-- Navbar -->
     <div class="w-full text-white bg-black dark-mode:text-gray-200 dark-mode:bg-gray-800 sticky top-0 z-50">
-        <div x-data="{ open: false }"
-            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="p-4 flex flex-row items-center justify-between">
-                <a href="../index.html"
-                    class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+                <a href="../index.html" class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
                     APU Basketball</a>
                 <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                     <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -39,17 +30,12 @@ body {
                     </svg>
                 </button>
             </div>
-            <nav :class="{'flex': open, 'hidden': !open}"
-                class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-                <a class="px-4 py-2 mt-2 text-sm font-semibold text-white bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-gray-600 focus:outline-none focus:shadow-outline"
-                    href="./AboutUs.html">About</a>
-                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                    href="./JoinUs.html">Join Us</a>
-                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                    href="./ContactUs.html">Contacts</a>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                <a class="px-4 py-2 mt-2 text-sm font-semibold text-white bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-gray-600 focus:outline-none focus:shadow-outline" href="./AboutUs.html">About</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./JoinUs.html">Join Us</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./ContactUs.html">Contacts</a>
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open"
-                        class="flex flex-row background-red-600 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline">
+                    <button @click="open = !open" class="flex flex-row background-red-600 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline">
                         <span>Others</span>
                         <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
                             class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
@@ -58,13 +44,8 @@ body {
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                        x-transition:enter-start="transform opacity-0 scale-95"
-                        x-transition:enter-end="transform opacity-100 scale-100"
-                        x-transition:leave="transition ease-in duration-75"
-                        x-transition:leave-start="transform opacity-100 scale-100"
-                        x-transition:leave-end="transform opacity-0 scale-95"
-                        class="z-50 absolute right-2 w-full mt-2 origin-center rounded-md shadow-lg md:w-96">
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95" class="z-50 absolute right-2 w-full mt-2 origin-center rounded-md shadow-lg md:w-96">
                         <div class="px-2 py-2 bg-white rounded-md shadow">
                             <table>
                                 <tr>
@@ -74,68 +55,58 @@ body {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="../index.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="../index.html">
                                             Home
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./JoinUs.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./JoinUs.html">
                                             Join Us
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./Sponsorship.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./Sponsorship.html">
                                             Sponsors
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./AboutUs.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./AboutUs.html">
                                             About Us
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./ContactUs.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./ContactUs.html">
                                             Contact
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="text-white block px-4 py-2 mt-2 text-sm font-semibold bg-red-600 rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./Gallery.html">
+                                        <a class="text-white block px-4 py-2 mt-2 text-sm font-semibold bg-red-600 rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./Gallery.html">
                                             Gallery
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./News.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./News.html">
                                             News
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./CourtBooking.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./CourtBooking.html">
                                             Book a Court
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./Covid.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./Covid.html">
                                             COVID-19
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./OurTeam.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./OurTeam.html">
                                             Our Team
                                         </a>
                                     </td>
@@ -145,16 +116,14 @@ body {
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./Achievements.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./Achievements.html">
                                             Achievements
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline"
-                                            href="./FAQ.html">
+                                        <a class="text-black block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:shadow-outline" href="./FAQ.html">
                                             FAQ
                                         </a>
                                     </td>
@@ -180,52 +149,50 @@ body {
     <div class="banner">
         <img src="../assets/img-19.png">
         <div>
-            <h2>Who We Are, and What <br />We Believe In</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nemo laboriosam veniam, facere odit
-                commodi et praesentium, repellat vitae numquam natus at, eaque libero reprehenderit necessitatibus
-                eligendi autem tenetur id.</p>
+            <h1>Our Gallery</h1>
+            <p>Take a sneak peak on what our daily activities looks like.</p>
         </div>
     </div>
 
     <div class="gallery">
         <div class="contents ">
             <div>
-                <img src="../assets/kl2.png ">
+                <img src="../assets/img-20.png">
 
             </div>
             <div>
-                <img src="../assets/langkawi.png ">
+                <img src="../assets/img-21.png">
             </div>
             <div>
-                <img src="../assets/beach.png ">
-            </div>
-        </div>
-        <div class="contents ">
-            <div>
-                <img src="../assets/malacca.png ">
-            </div>
-            <div>
-                <img src="../assets/penang.png ">
-            </div>
-            <div>
-                <img src="../assets/spa.png ">
+                <img src="../assets/img-22.png">
             </div>
         </div>
         <div class="contents ">
             <div>
-                <img src="../assets/malacca.png ">
+                <img src="../assets/img-23.png">
             </div>
             <div>
-                <img src="../assets/penang.png ">
+                <img src="../assets/img-24.png">
             </div>
             <div>
-                <img src="../assets/spa.png ">
+                <img src="../assets/img-25.png">
+            </div>
+        </div>
+        <div class="contents ">
+            <div>
+                <img src="../assets/img-26.png">
+            </div>
+            <div>
+                <img src="../assets/img-27.png">
+            </div>
+            <div>
+                <img src="../assets/img-29.png">
             </div>
         </div>
     </div>
 
-    <footer>
-        <!-- <h1>Website Name</h1> -->
+    <!-- <footer>
+
         <div class="footer-container">
             <div class="row">
                 <div class="footer-col">
@@ -264,7 +231,7 @@ body {
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>

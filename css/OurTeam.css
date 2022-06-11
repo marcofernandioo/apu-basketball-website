@@ -1,4 +1,8 @@
-﻿body {
+﻿* {
+	font-family: "League Spartan"
+}
+
+body {
 	color:white;
 	background-color:black;
 }

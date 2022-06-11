@@ -1,15 +1,9 @@
-const accordionBtns = document.querySelectorAll(".item-header");
+console.log('lanciao')
 
-accordionBtns.forEach((accordion) => {
-  accordion.onclick = function () {
-    this.classList.toggle("active");
+const faqs = document.querySelectorAll(".faq");
 
-    let content = this.nextElementSibling;
-
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  };
-});
+faqs.forEach(faq => {
+  faq.addEventListener("click", () => {
+    faq.classList.toggle("active")
+  })
+})
