@@ -12,9 +12,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
     <title>Homepage</title>
+    <script type="text/javascript">
+        window.onload = fadeIn;
+  
+        function fadeIn() {
+            var fade = document.getElementById("body");
+            var opacity = 0;
+            var intervalID = setInterval(function() {
+  
+                if (opacity < 1) {
+                    opacity = opacity + 0.1
+                    fade.style.opacity = opacity;
+                } else {
+                    clearInterval(intervalID);
+                }
+            }, 50);
+        }
+    </script>
 </head>
 
-<body>
+<body id="body" >
     <!-- Navbar -->
     <div class="w-full text-white bg-black dark-mode:text-gray-200 dark-mode:bg-gray-800 sticky top-0 z-50">
         <div x-data="{ open: false }"
@@ -213,17 +230,17 @@
         <div class="upper">
             <div>
                 <a href="./html/Sponsorship.html">
-                    <img src="assets/img-2.png">
+                    <img src="./assets/apu-logo.jpg">
                 </a>
             </div>
             <div>
                 <a href="./html/Sponsorship.html">
-                    <img src="assets/img-5.png ">
+                    <img src="./assets/apiit-logo.jpg">
                 </a>
             </div>
             <div>
                 <a href="./html/Sponsorship.html">
-                    <img src="assets/img-2.png">
+                    <img src="./assets/src-logo.png">
                 </a>
             </div>
         </div>

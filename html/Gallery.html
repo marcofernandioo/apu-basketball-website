@@ -7,9 +7,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/modal.css">
+
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>About Us</title>
+    <script >
+        console.log('sheesh')
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+    </script>
+
 </head>
 
 <body>
@@ -184,7 +210,6 @@
         <div class="contents ">
             <div>
                 <img src="../assets/img-20.png">
-
             </div>
             <div>
                 <img src="../assets/img-21.png">
@@ -216,6 +241,8 @@
             </div>
         </div>
     </div>
+
+
 
     <!-- Footer Section -->
     <!-- Footer CSS -->

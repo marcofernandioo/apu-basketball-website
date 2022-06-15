@@ -7,8 +7,35 @@
   <title>Book a Court</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
-	<link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet' />
+  <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet' />
   <link href="../css/CourtBooking.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -210,10 +237,13 @@
                       alt="" /> </span>Private Court
                 </p>
               </div>
-              <button
-                class="btn-outline font-medium rounded-lg flex justify-center items-center tracking-wide py-4 w-full focus:outline-none">
-                Choose Plan
-              </button>
+              <a href="#form">
+                <button
+                  class="btn-outline font-medium rounded-lg flex justify-center items-center tracking-wide py-4 w-full focus:outline-none">
+                  Choose Plan
+                </button>
+              </a>
+
             </div>
           </div>
           <!-- Card 2 -->
@@ -252,10 +282,13 @@
                       alt="" /> </span>+1 hour FREE!
                 </p>
               </div>
-              <button
-                class="btn-outline font-medium rounded-lg flex justify-center items-center tracking-wide py-4 w-full focus:outline-none">
-                Choose Plan
-              </button>
+              <a href="#form">
+                <button
+                  class="btn-outline font-medium rounded-lg flex justify-center items-center tracking-wide py-4 w-full focus:outline-none">
+                  Choose Plan
+                </button>
+              </a>
+
             </div>
           </div>
           <!-- Card 3 -->
@@ -295,32 +328,32 @@
                       alt="" /> </span>+1.5hour FREE!
                 </p>
               </div>
-              <button
-                class="btn-fill font-medium rounded-lg flex justify-center items-center tracking-wide py-4 w-full focus:outline-none">
-                Choose Plan
-              </button>
+              <a href="#form">
+                <button
+                  class="btn-fill font-medium rounded-lg flex justify-center items-center tracking-wide py-4 w-full focus:outline-none">
+                  Choose Plan
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Form -->
-  <section class="h-full w-full border-box transition-all duration-500 linear" style="background-color: #000000">
+  <section id="form" class="h-full w-full border-box transition-all duration-500 linear"
+    style="background-color: #000000">
     <div class="content-4-2" style="font-family: 'Poppins', sans-serif">
       <div class="flex flex-col items-center h-full lg:flex-row">
         <div class="relative hidden lg:block h-full width-left">
-          <img class="absolute object-fill centered"
-            src="../assets/img-cu.png"
-            alt="" />
+          <img class="absolute object-fill centered" src="../assets/img-cu.png" alt="" />
         </div>
         <div
           class="flex w-full h-full px-8 width-right sm:px-16 py-32 lg:mx-0 mx-auto items-left justify-left bg-black">
           <div class="w-full sm:w-7/12 md:w-8/12 lg:w-9/12 xl:w-7/12 mx-auto lg:mx-0">
             <div class="items-center justify-center lg:hidden flex">
-              <img src="../assets/img-cu.png"
-                alt="" />
+              <img src="../assets/img-cu.png" alt="" />
             </div>
             <h3 class="text-3xl font-semibold mb-3 text-white">
               Book a Court Now!
